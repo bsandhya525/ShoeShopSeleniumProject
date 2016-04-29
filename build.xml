@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="ShoeShopSeleniumProject" default=""  basedir=".">
+	
+	<property name="Environment" value="env" />
+	<property name="ws.home" value="${basedir}" />
+	<property name="ws.jars" value="${basedir}/jars" />
+	<property name="xslt.jars" value="${basedir}/xslt_jars" />
+	<property name="test.dest" value="${basedir}/build" />
+	<property name="test.src" value="${basedir}/src" />
+	<property name="ng.result" value="test-output" />
+	
+	
+	<path id="xsltreports.path">
+		
+			<pathelement location="${test.dest}" />
+			
+			<fileset dir="${xslt.jars}">
+				<include name="*.jar" />
+			</fileset>
+		
+		</path>
+	
+	<path id="testcase.path">
+	
+		<pathelement location="${test.dest}" />
+		
+		<fileset dir="${ws.jars}">
+			<include name="*.jar" />
+		</fileset>
+	
+	</path>
+
+    <target name="setClassPath" unless="test.classpath">
+       	<path id="classpath_jars">
+    		<fileset dir="${ws.jars}" includes="*.jar" />
+       	</path>
+       	<pathconvert pathsep=":" property="test.classpath"  refid="classpath_jars" />
+    </target>
+
+	<target name="init" depends="setClassPath">
+		<tstamp>
+			<format property="start.time" pattern="MM/dd/yyyy hh:mm aa" />
+		</tstamp>
+		<condition property="ANT"
+		           value="${env.ANT_HOME}/bin/ant.bat"
+		           else="${env.ANT_HOME}/bin/ant">
+		                 <os family="windows" />           
+		</condition>
+	    <taskdef name="testng" classpath="${test.classpath}" classname="org.testng.TestNGAntTask" />
+	</target>
+	
+	<target name="build" depends="init"></target>
+	
+	<target name="clean">
+		<delete dir="${test.dest}" />
+	</target>
+	
+	<target name="compile" depends="init,clean">
+		<delete includeemptydirs="true" quiet="true">
+			<fileset dir="${test.dest}" includes="**/*" />
+		</delete>
+		
+		<echo message="making directory..." />
+		<mkdir dir="${test.dest}" />
+		<echo message="classpath.....${test.classpath}" />
+		<echo message="compiling ......." />
+		<javac includeantruntime="false"
+			debug="true"
+			destdir="${test.dest}"
+			srcdir="${test.src}"
+			fork="true"
+			classpath="${test.classpath}">
+		</javac>
+	</target>
+
+    <target name="run" >
+    	<testng classpath="${test.classpath}:${test.dest}" >
+    		<xmlfileset dir="${ws.home}" includes="testng.xml" />
+    	</testng>
+    	
+    
+    </target>
+	
+	<target name="makexsltreports">
+		
+		<delete dir="${ws.home}/XSLT_Reports/output">
+		</delete>
+		<mkdir dir="${ws.home}/XSLT_Reports/output"/>
+		<xslt in="${ng.result}/testng-results.xml"
+			  style="${ws.home}/src/xslt/testng-results.xsl" 
+			  classpathref="xsltreports.path"
+			  out="${ws.home}/XSLT_Reports/output/index.html" 
+			  processor="SaxonLiaison">
+			
+			<param name="testNgXslt.outputDir" expression="${ws.home}/XSLT_Reports/output/" />
+			<param name="testNgXslt.showRuntimeTotals" expression="true"/>
+			<param expression="true" name="testNgXslt.sortTestCaseLinks" />
+			<param expression="FAIL,SKIP,PASS,CONF,BY_CLASS" name="testNgXslt.testDetailsFilter" />
+			
+		</xslt>
+		
+	</target>
+	
+	
+</project>

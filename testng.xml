@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My Test Suite">
+
+
+	<suite-files>
+	
+		<suite-file path="./ShoeShop Suite.xml" />
+	
+	</suite-files>
+
+
+
+</suite>
+
+
+
+
+

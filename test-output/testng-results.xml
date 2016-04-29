@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="14" passed="14">
+  <reporter-output>
+  </reporter-output>
+  <suite name="My Test Suite" duration-ms="0" started-at="2016-04-29T01:54:47Z" finished-at="2016-04-29T01:54:47Z">
+    <groups>
+    </groups>
+  </suite> <!-- My Test Suite -->
+  <suite name="ShoeShop Suite" duration-ms="141661" started-at="2016-04-29T01:52:25Z" finished-at="2016-04-29T01:54:47Z">
+    <groups>
+    </groups>
+    <test name="ShoeShopTest" duration-ms="141661" started-at="2016-04-29T01:52:25Z" finished-at="2016-04-29T01:54:47Z">
+      <class name="test.ShoeShopTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:test.ShoeShopTest@445b84c0]" name="initialize" is-config="true" duration-ms="16023" started-at="2016-04-28T21:52:25Z" finished-at="2016-04-28T21:52:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="15065" started-at="2016-04-28T21:52:41Z" data-provider="getMonthsData" finished-at="2016-04-28T21:52:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[January]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="6749" started-at="2016-04-28T21:52:56Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[February]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="6646" started-at="2016-04-28T21:53:03Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[March]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="5763" started-at="2016-04-28T21:53:10Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[April]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="5385" started-at="2016-04-28T21:53:15Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[May]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="5020" started-at="2016-04-28T21:53:21Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[June]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="5406" started-at="2016-04-28T21:53:26Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[July]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="5894" started-at="2016-04-28T21:53:31Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[August]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="6736" started-at="2016-04-28T21:53:37Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[September]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="6274" started-at="2016-04-28T21:53:44Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[October]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="6131" started-at="2016-04-28T21:53:50Z" data-provider="getMonthsData" finished-at="2016-04-28T21:53:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[November]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="23220" started-at="2016-04-28T21:53:56Z" data-provider="getMonthsData" finished-at="2016-04-28T21:54:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[December]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testMonthlyShoeDisplays(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testMonthlyShoeDisplays" duration-ms="24185" started-at="2016-04-28T21:54:19Z" data-provider="getMonthsData" finished-at="2016-04-28T21:54:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[All Shoes]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMonthlyShoeDisplays -->
+        <test-method status="PASS" signature="testUserEmailSubscription(java.lang.String)[pri:0, instance:test.ShoeShopTest@445b84c0]" name="testUserEmailSubscription" duration-ms="3102" started-at="2016-04-28T21:54:44Z" data-provider="getEmailData" finished-at="2016-04-28T21:54:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[bsandhya525@rediffmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUserEmailSubscription -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:test.ShoeShopTest@445b84c0]" name="closeBrowser" is-config="true" duration-ms="19" started-at="2016-04-28T21:54:47Z" finished-at="2016-04-28T21:54:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.ShoeShopTest -->
+    </test> <!-- ShoeShopTest -->
+  </suite> <!-- ShoeShop Suite -->
+</testng-results>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">2 suites</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-ShoeShop_Suite">
+              <span class="suite-name border-passed">ShoeShop Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-ShoeShop_Suite">
+                    <span>C:\Users\200018798\workspace\ShoeShopSeleniumProject\ShoeShop Suite.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-ShoeShop_Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-ShoeShop_Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-ShoeShop_Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-ShoeShop_Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-ShoeShop_Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-ShoeShop_Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">14 methods,   14 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-ShoeShop_Suite" class="hide-methods passed suite-ShoeShop_Suite"> (hide)</a> <!-- hide-methods passed suite-ShoeShop_Suite -->
+                      <a href="#" panel-name="suite-ShoeShop_Suite" class="show-methods passed suite-ShoeShop_Suite"> (show)</a> <!-- show-methods passed suite-ShoeShop_Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-ShoeShop_Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(January)">testMonthlyShoeDisplays(January)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(June)">testMonthlyShoeDisplays(June)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(July)">testMonthlyShoeDisplays(July)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(September)">testMonthlyShoeDisplays(September)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(March)">testMonthlyShoeDisplays(March)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(May)">testMonthlyShoeDisplays(May)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(November)">testMonthlyShoeDisplays(November)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(December)">testMonthlyShoeDisplays(December)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(October)">testMonthlyShoeDisplays(October)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(August)">testMonthlyShoeDisplays(August)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(All Shoes)">testMonthlyShoeDisplays(All Shoes)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(February)">testMonthlyShoeDisplays(February)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testMonthlyShoeDisplays(April)">testMonthlyShoeDisplays(April)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-ShoeShop_Suite" title="test.ShoeShopTest" hash-for-method="testUserEmailSubscription(bsandhya525@rediffmail.com)">testUserEmailSubscription(bsandhya525@rediffmail.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-ShoeShop_Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-My_Test_Suite" class="panel My_Test_Suite">
+        </div> <!-- panel My_Test_Suite -->
+        <div panel-name="suite-ShoeShop_Suite" class="panel ShoeShop_Suite">
+          <div class="suite-ShoeShop_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">test.ShoeShopTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(January)">
+                  </a> <!-- testMonthlyShoeDisplays(January) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(January)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(June)">
+                  </a> <!-- testMonthlyShoeDisplays(June) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(June)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(July)">
+                  </a> <!-- testMonthlyShoeDisplays(July) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(July)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(September)">
+                  </a> <!-- testMonthlyShoeDisplays(September) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(September)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(March)">
+                  </a> <!-- testMonthlyShoeDisplays(March) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(March)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(May)">
+                  </a> <!-- testMonthlyShoeDisplays(May) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(May)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(November)">
+                  </a> <!-- testMonthlyShoeDisplays(November) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(November)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(December)">
+                  </a> <!-- testMonthlyShoeDisplays(December) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(December)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(October)">
+                  </a> <!-- testMonthlyShoeDisplays(October) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(October)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(August)">
+                  </a> <!-- testMonthlyShoeDisplays(August) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(August)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(All Shoes)">
+                  </a> <!-- testMonthlyShoeDisplays(All Shoes) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(All Shoes)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(February)">
+                  </a> <!-- testMonthlyShoeDisplays(February) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(February)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMonthlyShoeDisplays(April)">
+                  </a> <!-- testMonthlyShoeDisplays(April) -->
+                  <span class="method-name">testMonthlyShoeDisplays</span>
+                  <span class="parameters">(April)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testUserEmailSubscription(bsandhya525@rediffmail.com)">
+                  </a> <!-- testUserEmailSubscription(bsandhya525@rediffmail.com) -->
+                  <span class="method-name">testUserEmailSubscription</span>
+                  <span class="parameters">(bsandhya525@rediffmail.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ShoeShop_Suite-class-passed -->
+        </div> <!-- panel ShoeShop_Suite -->
+        <div panel-name="test-xml-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\200018798\workspace\ShoeShopSeleniumProject\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;My Test Suite&quot;&gt;
+  &lt;suite-files&gt;
+    &lt;suite-file path=&quot;./ShoeShop Suite.xml&quot;/&gt;
+  &lt;/suite-files&gt;
+&lt;/suite&gt; &lt;!-- My Test Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="test-xml-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\200018798\workspace\ShoeShopSeleniumProject\ShoeShop Suite.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;ShoeShop Suite&quot;&gt;
+  &lt;test name=&quot;ShoeShopTest&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;test.ShoeShopTest&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ShoeShopTest --&gt;
+&lt;/suite&gt; &lt;!-- ShoeShop Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for My Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for ShoeShop Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">ShoeShopTest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for My Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for ShoeShop Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for My Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_My_Test_Suite');
+function tableData_My_Test_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(0);
+window.suiteTableData['My_Test_Suite']= { tableData: data, tableDiv: 'times-div-My_Test_Suite'}
+return data;
+}
+              </script>
+              <div id="times-div-My_Test_Suite">
+              </div> <!-- times-div-My_Test_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for ShoeShop Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_ShoeShop_Suite');
+function tableData_ShoeShop_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(14);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'testMonthlyShoeDisplays')
+data.setCell(0, 2, 'test.ShoeShopTest')
+data.setCell(0, 3, 24185);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testMonthlyShoeDisplays')
+data.setCell(1, 2, 'test.ShoeShopTest')
+data.setCell(1, 3, 23220);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testMonthlyShoeDisplays')
+data.setCell(2, 2, 'test.ShoeShopTest')
+data.setCell(2, 3, 15065);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testMonthlyShoeDisplays')
+data.setCell(3, 2, 'test.ShoeShopTest')
+data.setCell(3, 3, 6749);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testMonthlyShoeDisplays')
+data.setCell(4, 2, 'test.ShoeShopTest')
+data.setCell(4, 3, 6736);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testMonthlyShoeDisplays')
+data.setCell(5, 2, 'test.ShoeShopTest')
+data.setCell(5, 3, 6646);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testMonthlyShoeDisplays')
+data.setCell(6, 2, 'test.ShoeShopTest')
+data.setCell(6, 3, 6274);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testMonthlyShoeDisplays')
+data.setCell(7, 2, 'test.ShoeShopTest')
+data.setCell(7, 3, 6131);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testMonthlyShoeDisplays')
+data.setCell(8, 2, 'test.ShoeShopTest')
+data.setCell(8, 3, 5894);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testMonthlyShoeDisplays')
+data.setCell(9, 2, 'test.ShoeShopTest')
+data.setCell(9, 3, 5763);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testMonthlyShoeDisplays')
+data.setCell(10, 2, 'test.ShoeShopTest')
+data.setCell(10, 3, 5406);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'testMonthlyShoeDisplays')
+data.setCell(11, 2, 'test.ShoeShopTest')
+data.setCell(11, 3, 5385);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'testMonthlyShoeDisplays')
+data.setCell(12, 2, 'test.ShoeShopTest')
+data.setCell(12, 3, 5020);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'testUserEmailSubscription')
+data.setCell(13, 2, 'test.ShoeShopTest')
+data.setCell(13, 3, 3102);
+window.suiteTableData['ShoeShop_Suite']= { tableData: data, tableDiv: 'times-div-ShoeShop_Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 2 minutes</span>
+              <div id="times-div-ShoeShop_Suite">
+              </div> <!-- times-div-ShoeShop_Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for My Test Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for ShoeShop Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-My_Test_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-ShoeShop_Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">test.ShoeShopTest</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initialize</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(January)</span>
+                <span class="method-start">16057 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(February)</span>
+                <span class="method-start">31123 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(March)</span>
+                <span class="method-start">37873 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(April)</span>
+                <span class="method-start">44519 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(May)</span>
+                <span class="method-start">50282 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(June)</span>
+                <span class="method-start">55668 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(July)</span>
+                <span class="method-start">60688 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(August)</span>
+                <span class="method-start">66094 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(September)</span>
+                <span class="method-start">71988 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(October)</span>
+                <span class="method-start">78725 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(November)</span>
+                <span class="method-start">85000 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(December)</span>
+                <span class="method-start">91131 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testMonthlyShoeDisplays(All Shoes)</span>
+                <span class="method-start">114351 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testUserEmailSubscription(bsandhya525@rediffmail.com)</span>
+                <span class="method-start">138536 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">141640 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
