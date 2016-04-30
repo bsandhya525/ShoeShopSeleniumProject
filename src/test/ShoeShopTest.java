@@ -9,7 +9,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -28,29 +30,47 @@ public class ShoeShopTest {
 	@BeforeTest
 	public void initialize() throws IOException
 	{
-		driver = new FirefoxDriver();
+		
+		//Loading Properties Files
+		
+		OR = new Properties();
+				
+		FileInputStream fistr = new FileInputStream(System.getProperty("user.dir")+"/src/resources/OR.properties");
+				
+		OR.load(fistr);
+				
+				
+		CONFIG = new Properties();
+				
+		fistr = new FileInputStream(System.getProperty("user.dir")+"/src/resources/config.properties");
+				
+		CONFIG.load(fistr);
+				
+		fistr.close();
+		
+		if(CONFIG.getProperty("browserName").equalsIgnoreCase("Mozilla"))
+		{
+			driver = new FirefoxDriver();
+		}
+		else if(CONFIG.getProperty("browserName").equalsIgnoreCase("Chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver.exe");
+			
+			driver = new ChromeDriver();
+		}
+		else if(CONFIG.getProperty("browserName").equalsIgnoreCase("IE"))
+		{
+			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/drivers/IEDriverServer.exe");
+			
+			driver = new InternetExplorerDriver();
+		}
 		
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		
-		//Loading Properties Files
 		
-		OR = new Properties();
-		
-		FileInputStream fistr = new FileInputStream(System.getProperty("user.dir")+"/src/resources/OR.properties");
-		
-		OR.load(fistr);
-		
-		
-		CONFIG = new Properties();
-		
-		fistr = new FileInputStream(System.getProperty("user.dir")+"/src/resources/config.properties");
-		
-		CONFIG.load(fistr);
-		
-		fistr.close();
 	}
 	
 	@Test(dataProvider="getMonthsData")
@@ -66,49 +86,65 @@ public class ShoeShopTest {
 		
 		Thread.sleep(1000);
 		
-	    WebElement listElm = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")));
+	    List<WebElement> listElms = driver.findElements(By.xpath(OR.getProperty("shoeList_xpath")));
 	    
-	    List<WebElement> subList = listElm.findElements(By.tagName(OR.getProperty("list_tagName")));
-	    
-	    System.out.println("Number of shoes displayed:"+subList.size());
+	    System.out.println("Number of shoes displayed:"+listElms.size());
 	    
 	    
-	    for(int i=0;i<subList.size();i++)
+	    for(int i=0;i<listElms.size();i++)
 	    {
-	    	WebElement elm = (WebElement)subList.get(i);
 	    	
-	    	WebElement divElm = elm.findElement(By.className(OR.getProperty("shoeResult_div_class")));
+	    	String brand = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[1]/td[2]")).getText();
+	    	String name = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[2]/td[2]")).getText();
+	    	String price = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[3]/td[2]")).getText();
+	    	String desc = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[4]/td[2]")).getText();
+	    	String month = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[5]/td[2]")).getText();
 	    	
-	    	WebElement tableElm = divElm.findElement(By.xpath(OR.getProperty("tableBody_xpath")));
+	    	System.out.println("brand:"+brand);
 	    	
-	    	List<WebElement> tableRows = tableElm.findElements(By.tagName(OR.getProperty("tableRow_tagName")));
+	    	System.out.println("name:"+name);
 	    	
-	    	System.out.println("table rows:"+tableRows.size());
+	    	System.out.println("price:"+ price);
 	    	
-	    	for(int j=0;j<tableRows.size();j++)
-	    	{
-	    		if(j<5)
-	    		{
-	    			String name = tableElm.findElement(By.xpath("//tr["+(j+1)+"]/td[1]")).getText();
-	    			String value = tableElm.findElement(By.xpath("//tr["+(j+1)+"]/td[2]")).getText();
-	    			System.out.println(tableElm.findElement(By.xpath("//tr["+(j+1)+"]/td[2]")).getText());
-	    			
-	    			Assert.assertNotNull(value, name +" is null");
-	    		}
-	    		else if(j==5)
-	    		{
-	    			 WebElement imgElm = tableElm.findElement(By.xpath("//tr["+(j+1)+"]/td[1]")).findElement(By.tagName("img"));
-	    					
-	    			 Assert.assertNotNull(imgElm, "There is no Shoe image");
-	    			 
-	    			 String  imgSrc =	imgElm.getAttribute("src");
-	    			
-	    			System.out.println("Image source:"+imgSrc);
-	    			
-	    			Assert.assertNotNull(imgSrc, "Image source is null");
-	    		}
-	    		
-	    	}
+	    	System.out.println("desc:"+desc);
+	    	
+	    	System.out.println("month:"+month);
+	    	
+	    	Assert.assertNotNull(brand, "brand is null.No brand to display.");
+	    	
+	    	Assert.assertTrue(brand.length()>0, "There is no Brand of the shoe");
+	    	
+	    	Assert.assertNotNull(name, "name is null.No Name to display.");
+	    	
+	    	Assert.assertTrue(name.length()>0,"There is no name of the shoe");
+	    	
+	    	Assert.assertNotNull(price, "Price is null.No price to display.");
+	    	
+	    	Assert.assertTrue(price.length()>0,"There is no price of the shoe");
+	    	
+	    	Assert.assertNotNull(desc, "desc is null.No description to display.");
+	    	
+	    	Assert.assertTrue(desc.length()>0,"There is no description of the shoe");
+	    	
+	    	Assert.assertNotNull(month, "Release Month is null.No release month to display.");
+	    	
+	    	Assert.assertTrue(month.length()>0,"There is no release month of the shoe");
+	    	
+	    	WebElement imgTd = driver.findElement(By.xpath(OR.getProperty("shoeList_xpath")+"["+(i+1)+"]"+"/div/table/tbody/tr[6]/td[1]"));
+	    	
+	    	List<WebElement> imgElms = imgTd.findElements(By.tagName("img"));
+	    	
+	    	System.out.println("Image Elements:"+imgElms.size());
+	    	
+	    	Assert.assertTrue(imgElms.size()>0,"There is no Shoe Image");
+	    	
+	    	String imgSrc = imgElms.get(0).getAttribute("src");
+	    	
+	    	System.out.println("image source:"+imgSrc);
+	    	
+	    	Assert.assertTrue(imgSrc.length()>0, "Image src is null.No Image to display.");
+	    	
+	    	
 	    }
 		
 		
@@ -127,7 +163,7 @@ public class ShoeShopTest {
 	}
 	
 	
-	public void verifyEmailSubscription(String email)
+	private void verifyEmailSubscription(String email)
 	{
 		WebElement successDivElm = driver.findElement(By.xpath(OR.getProperty("subscription_success_div_xpath")));
 		
@@ -140,7 +176,8 @@ public class ShoeShopTest {
 	@AfterTest
 	public void closeBrowser()
 	{
-		driver.close();
+		if(driver != null)
+			driver.close();
 	}
 	
 	
@@ -148,6 +185,8 @@ public class ShoeShopTest {
 	public Object[][] getMonthsData()
 	{
 		Object[][] data = new Object[13][1];
+		
+
 		
 		data[0][0] ="January";
 		data[1][0]="February";
